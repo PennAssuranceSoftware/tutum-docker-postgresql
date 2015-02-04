@@ -7,13 +7,13 @@ Base docker image to run a PostgreSQL database server
 Usage
 -----
 
-To create the image `tutum/postgresql`, execute the following command on the tutum-docker-postgresql folder:
+To create the image `pennassurancesoftware/postgresql`, execute the following command on the tutum-docker-postgresql folder:
 
-	docker build -t tutum/postgresql .
+	docker build -t pennassurancesoftware/postgresql .
 
 To run the image and bind to port 5432:
 
-	docker run -d -p 5432:5432 tutum/postgresql
+	docker run -d -p 5432:5432 pennassurancesoftware/postgresql
 
 The first time that you run your container, a new user `postgres` with all privileges 
 will be created in PostgreSQL with a random password. To get the password, check the logs
@@ -43,7 +43,7 @@ Setting a specific password for the admin account
 If you want to use a preset password instead of a random generated one, you can
 set the environment variable `POSTGRES_PASS` to your specific password when running the container:
 
-	docker run -d -p 5432:5432 -e POSTGRES_PASS="mypass" tutum/postgresql
+	docker run -d -p 5432:5432 -e POSTGRES_PASS="mypass" pennassurancesoftware/postgresql
 
 
 Mounting the database file volume

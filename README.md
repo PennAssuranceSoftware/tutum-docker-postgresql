@@ -48,7 +48,9 @@ set the environment variable `POSTGRES_PASS` to your specific password when runn
 Create Database And Database User
 -------------------------------------------------
 
-docker run -d -p 5432:5432 -e USER="my_user" -e PASS="mypass" -e DB="my_db" pennassurancesoftware/postgresql
+You can also specify a database that will be created along with a database user that will own the newly created database.
+
+    docker run -d -p 5432:5432 -e USER="my_user" -e PASS="mypass" -e DB="my_db" pennassurancesoftware/postgresql
 
 
 Mounting the database file volume

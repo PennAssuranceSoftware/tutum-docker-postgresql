@@ -44,6 +44,11 @@ If you want to use a preset password instead of a random generated one, you can
 set the environment variable `POSTGRES_PASS` to your specific password when running the container:
 
 	docker run -d -p 5432:5432 -e POSTGRES_PASS="mypass" pennassurancesoftware/postgresql
+	
+Create Database And Database User
+-------------------------------------------------
+
+docker run -d -p 5432:5432 -e USER="my_user" -e PASS="mypass" -e DB="my_db" pennassurancesoftware/postgresql
 
 
 Mounting the database file volume
